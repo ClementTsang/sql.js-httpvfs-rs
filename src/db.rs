@@ -11,6 +11,9 @@ extern "C" {
     #[wasm_bindgen(catch, js_name = execQuery)]
     pub async fn exec_query(query: String) -> Result<JsValue, JsValue>;
 
+    #[wasm_bindgen(js_name = isInitialized)]
+    pub fn is_worker_initialized() -> bool;
+
 }
 
 pub async fn create_bundled_db_worker(configs: Vec<JsValue>) {

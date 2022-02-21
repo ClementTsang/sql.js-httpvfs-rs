@@ -41,3 +41,7 @@ export function execQuery(query: string): Promise<any[]> {
     return Promise.reject(new Error("Global worker is undefined."));
   }
 }
+
+export function isInitialized(): boolean {
+  return global_worker !== null;
+}
