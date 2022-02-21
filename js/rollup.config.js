@@ -4,14 +4,13 @@ import { terser } from "rollup-plugin-terser";
 import commonjs from "@rollup/plugin-commonjs";
 import copy from "rollup-plugin-copy";
 
-const production = !process.env.ROLLUP_WATCH;
-
 export default {
   input: ["./src/index.ts"],
   output: {
-    sourcemap: !production,
     dir: "../src/build/",
-    format: "esm",
+    format: "es",
+    sourcemap: false,
+    exports: "named",
   },
   plugins: [
     resolve(),
@@ -32,8 +31,8 @@ export default {
   ],
   onwarn(warning, warn) {
     // Suppress some warnings
-    if (warning.code === "EVAL") return;
-    if (warning.code === "THIS_IS_UNDEFINED") return;
+    // if (warning.code === "EVAL") return;
+    // if (warning.code === "THIS_IS_UNDEFINED") return;
     warn(warning);
   },
 };

@@ -13,9 +13,6 @@ export async function createBundledDbWorker(
   });
   const wasmUrl = URL.createObjectURL(wasmBlob);
 
-  console.log(`workerUrl: ${workerUrl.toString()}`);
-  console.log(`wasmUrl: ${wasmUrl.toString()}`);
-
   global_worker = await createDbWorker(
     configs,
     workerUrl.toString(),
@@ -28,9 +25,6 @@ export async function createUrlDbWorker(
   workerUrl: string,
   wasmUrl: string
 ) {
-  console.log(`workerUrl: ${workerUrl}`);
-  console.log(`wasmUrl: ${wasmUrl}`);
-
   global_worker = await createDbWorker(configs, workerUrl, wasmUrl);
 }
 

@@ -16,6 +16,7 @@ extern "C" {
 
 }
 
+/// Creates a worker containing the worker and WASM blobs.
 pub async fn create_bundled_db_worker(configs: Vec<JsValue>) {
     const WORKER_BLOB: &[u8] = include_bytes!("./build/assets/sqlite.worker.js");
     const WASM_BLOB: &[u8] = include_bytes!("./build/assets/sql-wasm.wasm");
