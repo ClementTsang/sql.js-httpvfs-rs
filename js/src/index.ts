@@ -1,5 +1,4 @@
 import { createDbWorker, WorkerHttpvfs } from "sql.js-httpvfs";
-export * from "sql.js-httpvfs";
 
 let global_worker: WorkerHttpvfs | null = null;
 
@@ -22,6 +21,17 @@ export async function createBundledDbWorker(
     workerUrl.toString(),
     wasmUrl.toString()
   );
+}
+
+export async function createUrlDbWorker(
+  configs: any[],
+  workerUrl: string,
+  wasmUrl: string
+) {
+  console.log(`workerUrl: ${workerUrl}`);
+  console.log(`wasmUrl: ${wasmUrl}`);
+
+  global_worker = await createDbWorker(configs, workerUrl, wasmUrl);
 }
 
 export function execQuery(query: string): Promise<any[]> {
