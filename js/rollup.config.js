@@ -15,6 +15,7 @@ export default {
   plugins: [
     resolve(),
     commonjs(),
+    typescript(),
     copy({
       targets: [
         {
@@ -26,7 +27,6 @@ export default {
         },
       ],
     }),
-    typescript(),
     terser({ format: { comments: false } }),
   ],
   onwarn(warning, warn) {
