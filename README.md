@@ -1,8 +1,8 @@
 # sql.js-httpvfs-rs
 
-A _very_ minimal and slightly ridiculous-sounding Rust wrapper around [sql.js-httpvfs](https://github.com/phiresky/sql.js-httpvfs), for use in stuff like WASM web applications.
+A _very_ experimental, minimal and slightly ridiculous-sounding Rust wrapper around [sql.js-httpvfs](https://github.com/phiresky/sql.js-httpvfs), for use in stuff like WASM web applications.
 
-**Note**: This is **not** intended for any serious or production use, at least for now. It's just quick wasm-bindgen bindings to be called by a Rust application.
+**Note**: This is **not** intended for any serious or production use, at least for now. It's just quick wasm-bindgen bindings to be called by a Rust application, and is mostly an experiment into what might work.
 
 The driving force for this was for work in some small projects for fun like [opal](https://github.com/ClementTsang/opal).
 
