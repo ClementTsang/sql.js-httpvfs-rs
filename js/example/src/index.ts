@@ -16,8 +16,8 @@ async function load() {
         from: "inline",
         config: {
           serverMode: "full",
-          url: "/example.sqlite3",
-          requestChunkSize: 4096,
+          url: "../databases/db.sqlite3",
+          requestChunkSize: 1024,
         },
       },
     ],
@@ -25,7 +25,7 @@ async function load() {
     wasmUrl.toString()
   );
 
-  const result = await execQuery(`select * from mytable`);
+  const result = await execQuery(`select * from english WHERE word="test"`);
 
   document.body.textContent = JSON.stringify(result);
 }

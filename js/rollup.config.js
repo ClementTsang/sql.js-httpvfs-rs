@@ -10,26 +10,26 @@ export default {
     dir: "../src/build/",
     format: "es",
     sourcemap: false,
-    exports: "named",
   },
   plugins: [
     resolve(),
-    typescript({ compilerOptions: { module: 'CommonJS' } }),
+    typescript({
+      compilerOptions: { module: "CommonJS" },
+    }),
     commonjs({
-        extensions: ['.js', '.ts'],
-        sourceMap: false
+      extensions: [".js", ".ts"],
     }),
     terser({ format: { comments: false } }),
     copy({
       targets: [
         {
           src: [
-            "./node_modules/sql.js-httpvfs/dist/sql-wasm.wasm",
-            "./node_modules/sql.js-httpvfs/dist/sqlite.worker.js",
+            "../sql.js-httpvfs/dist/sql-wasm.wasm",
+            "../sql.js-httpvfs/dist/sqlite.worker.js",
           ],
           dest: "../src/build/assets/",
         },
       ],
     }),
-  ]
+  ],
 };

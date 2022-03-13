@@ -1,6 +1,9 @@
 // export * from "../sql.js-httpvfs/src/index";
 
-import { createDbWorker, WorkerHttpvfs } from "sql.js-httpvfs";
+import {
+  createDbWorker,
+  WorkerHttpvfs,
+} from "../../sql.js-httpvfs/dist/index.js";
 
 let global_worker: WorkerHttpvfs | null = null;
 
