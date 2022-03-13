@@ -14,8 +14,12 @@ export default {
   },
   plugins: [
     resolve(),
-    commonjs(),
-    typescript(),
+    typescript({ compilerOptions: { module: 'CommonJS' } }),
+    commonjs({
+        extensions: ['.js', '.ts'],
+        sourceMap: false
+    }),
+    terser({ format: { comments: false } }),
     copy({
       targets: [
         {
@@ -27,12 +31,5 @@ export default {
         },
       ],
     }),
-    terser({ format: { comments: false } }),
-  ],
-  onwarn(warning, warn) {
-    // Suppress some warnings
-    // if (warning.code === "EVAL") return;
-    // if (warning.code === "THIS_IS_UNDEFINED") return;
-    warn(warning);
-  },
+  ]
 };
