@@ -1,3 +1,4 @@
 [submodule "sql.js-httpvfs"]
 	path = sql.js-httpvfs
-	url = https://github.com/phiresky/sql.js-httpvfs
+	url = https://github.com/ClementTsang/sql.js-httpvfs
+
