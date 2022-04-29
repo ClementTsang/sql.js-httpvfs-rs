@@ -13,7 +13,7 @@ Add the crate to your `Cargo.toml` file as such:
 
 ```toml
 [dependencies]
-sql-js-httpvfs-rs = "0.0.1"
+sql-js-httpvfs-rs = "0.0.2"
 ```
 
 Then, in your Rust code, you can create a worker using something like:
@@ -42,6 +42,46 @@ create_db_worker(configs, worker_url, wasm_url).await;
 If you wish to use the internally bundled version of the WASM and worker files to avoid having to bundle things, you
 could instead enable the `bundled` feature - note that this may cause some problems with regards to the expected
 paths for the databases.
+
+## Building
+
+If instead you want to build from scratch, follow these steps:
+
+1. Clone the repo.
+
+   ```bash
+   git clone https://github.com/ClementTsang/sql.js-httpvfs-rs
+   ```
+
+2. Build sql.js-httpvfs. There should be a `dist/` folder in `sql.js-httpvfs`.
+
+   ```bash
+   cd sql.js-httpvfs
+
+   # First you have to build sql.js
+   cd sql.js
+   yarn build
+
+   # Then build sql.js-httpvfs
+   cd ..
+   yarn build
+   ```
+
+   You can find more instructions about this [on the sql.js-httpvfs repo](https://github.com/ClementTsang/sql.js-httpvfs).
+
+3. Build via rollup.
+
+   ```bash
+   cd ../js
+   npm run build
+   ```
+
+4. Build the Rust wrapper.
+
+   ```bash
+   cd ..
+   cargo build
+   ```
 
 ## Motivation
 
