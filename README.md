@@ -13,7 +13,7 @@ Add the crate to your `Cargo.toml` file as such:
 
 ```toml
 [dependencies]
-sql-js-httpvfs-rs = "0.0.2"
+sql-js-httpvfs-rs = "0.0.1"
 ```
 
 Then, in your Rust code, you can create a worker using something like:
