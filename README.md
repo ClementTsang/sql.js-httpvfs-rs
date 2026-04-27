@@ -3,6 +3,8 @@
 A _very_ experimental, basic, and slightly ridiculous-sounding Rust wrapper around
 [sql.js-httpvfs](https://github.com/phiresky/sql.js-httpvfs), for use in stuff like WASM web applications.
 
+For an example of an application that uses this, see [opal](https://clementtsang.github.io/opal/), an IPA phonetic web app which pulls its database with this.
+
 **Note**: This is **not** intended for any serious or production use, at least for now. It's just quick wasm-bindgen
 bindings to be called by a Rust application, and is mostly an experiment into what might work. You shouldn't really
 expect too much support from this.
