@@ -1,16 +1,16 @@
 [package]
 name = "sql-js-httpvfs-rs"
-version = "0.0.1"
-edition = "2021"
+version = "0.0.2"
+edition = "2024"
 description = "A very experimental, basic, and slightly ridiculous-sounding Rust wrapper around sql.js-httpvfs"
 license = "Apache-2.0"
 categories = ["web-programming", "api-bindings"]
 repository = "https://github.com/ClementTsang/sql.js-httpvfs-rs"
 
 [dependencies]
-js-sys = "0.3.83"
-wasm-bindgen = "0.2.106"
-wasm-bindgen-futures = "0.4.56"
+js-sys = "0.3.103"
+wasm-bindgen = "0.2.126"
+wasm-bindgen-futures = "0.4.76"
 
 [features]
 bundled = []
