@@ -1,5 +1,9 @@
 # sql.js-httpvfs-rs
 
+[<img src="https://img.shields.io/crates/v/sql-js-httpvfs-rs.svg?style=flat-square" alt="crates.io link">](https://crates.io/crates/sql-js-httpvfs-rs)
+[<img src="https://img.shields.io/badge/docs-latest-66c2a5?style=flat-square&labelColor=555555&logoColor=white" alt="Stable documentation">](https://docs.rs/sql-js-httpvfs-rs/latest/sql_js_httpvfs_rs/)
+
+
 A _very_ experimental, basic, and slightly ridiculous-sounding Rust wrapper around
 [sql.js-httpvfs](https://github.com/phiresky/sql.js-httpvfs), for use in stuff like WASM web applications.
 
